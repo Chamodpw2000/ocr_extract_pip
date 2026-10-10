@@ -76,7 +76,7 @@ print(available_engines())  # ['tesseract', ...]
 ## Development
 
 ```
-git clone <your-repo-url>
+git clone https://github.com/Chamodpw2000/ocr_extract_pip.git
 cd ocrbychamod
 python -m venv .venv
 .venv\Scripts\activate
