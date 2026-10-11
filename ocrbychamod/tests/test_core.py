@@ -2,15 +2,15 @@ import shutil
 import pytest
 from PIL import Image, ImageDraw, ImageFont
 
-from ocrbychamod import extract_text, OCREngine, register_engine, available_engines
+
+from ocrbychamod import extract_text, OCREngine, register_engine, available_engines, Word
 
 
 class FakeEngine(OCREngine):
     name = "fake"
 
-    def extract_text(self, image):
-        return "fake text"
-
+    def extract_words(self, image):
+        return [Word("fake", 0, 0, 40, 20), Word("text", 50, 0, 90, 20)]
 
 @pytest.fixture
 def png(tmp_path):
